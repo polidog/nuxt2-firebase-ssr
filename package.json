@@ -1,0 +1,10 @@
+{
+  "name": "nuxt2-firebase-ssr",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "rm -rf public/* && cd src && npm run build && cd ../ && cp -R functions/nuxt/dist/ public/assets && cp -R src/static/* public",
+    "serve": "npm run build && cd firebase serve --only functions,hosting"
+  },
+  "author": "polidog"
+}
